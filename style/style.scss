@@ -1,0 +1,137 @@
+p {
+  font-size: 20px;
+}
+body {
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    section.top-container {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px;
+      div.top-items {
+        display: flex;
+        gap: 20px;
+      }
+    }
+    section.welcome {
+      height: 250px;
+      background-color: #dcecf2;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-content: center;
+    }
+    section.bottom-wrapper {
+      max-width: 1200px;
+
+      align-self: center;
+      div.pic-top-container {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        div.promotion-item {
+          display: flex;
+          background-color: #dcecf2;
+          img {
+            width: 80px;
+            height: 50px;
+          }
+          p {
+            display: block;
+            margin-block: auto;
+            padding-left: 10px;
+          }
+        }
+      }
+      div.pic-bottom-container {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 20px;
+        justify-content: space-between;
+        gap: 20px;
+        div.title-item {
+          img {
+            width: 100%;
+            object-fit: cover;
+            vertical-align: top;
+          }
+          p {
+            display: flex;
+            padding: 5px;
+            justify-content: center;
+            background-color: #dcecf2;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1200px) {
+  #hamburger {
+    display: none;
+  }
+  section.bottom-wrapper {
+    margin: 5vh 5vw;
+  }
+  div.title-item {
+    width: calc(16.94% - 20px);
+  }
+  div.promotion-item {
+    width: calc(33.88% - 20px);
+  }
+  section.welcome p {
+    font-size: 40px;
+  }
+}
+@media (min-width: 600px) and (max-width: 1200px) {
+  #hamburger {
+    display: none;
+  }
+  div.title-item {
+    width: calc(25% - 15px);
+  }
+  section.bottom-wrapper {
+    margin: 5%;
+  }
+  section.welcome {
+    p {
+      font-size: 40px;
+    }
+  }
+  div.promotion-item {
+    width: calc(50% - 10px);
+    &:last-child {
+      flex-grow: 1;
+    }
+  }
+}
+@media (min-width: 360px) and (max-width: 600px) {
+  #hamburger {
+    display: block;
+    img {
+      width: 20px;
+      aspect-ratio: 1/1;
+    }
+  }
+  section.bottom-wrapper {
+    margin: 5%;
+  }
+  section.top-container {
+    #top-items {
+      display: none;
+    }
+  }
+  section.welcome {
+    p {
+      font-size: 150%;
+    }
+  }
+  div.promotion-item {
+    width: 100%;
+  }
+  div.title-item {
+    width: 100%;
+  }
+}

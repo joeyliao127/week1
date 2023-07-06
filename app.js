@@ -10,19 +10,18 @@ hamburger.addEventListener("click", (e) => {
   body.style.overflow = "hidden";
 });
 
-if (windowWidth > 360 && windowWidth < 600) {
-  body.addEventListener("click", (e) => {
+body.addEventListener("click", (e) => {
+  if (windowWidth > 360 && windowWidth < 600) {
+    console.log("window click event");
     if (!e.target.closest(".hamburger")) {
       body.classList.remove("no-scroll");
       body.style.overflow = "auto";
     }
     topItems.style.display = "none";
-  });
+  }
+});
 
-  topItems.addEventListener("click", (e) => {
-    e.stopPropagation();
-    topItems.style.display = "block";
-  });
-}
-
-console.log(window);
+topItems.addEventListener("click", (e) => {
+  e.stopPropagation();
+  topItems.style.display = "block";
+});

@@ -21,9 +21,6 @@ section.nav-container .top-logo {
 }
 section.nav-container .top-items {
   display: grid;
-  width: 30vw;
-  min-width: 120px;
-  max-width: 400px;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(1, 30px);
   gap: 20px;

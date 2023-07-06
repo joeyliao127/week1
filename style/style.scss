@@ -18,9 +18,8 @@ section.nav-container {
   }
   .top-items {
     display: grid;
-    width: 30vw;
-    min-width: 120px;
-    max-width: 400px;
+    // width: 20%;
+    // 筆記： 如果grid設定20%，將會突出父層空間
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(1, 30px);
     gap: 20px;

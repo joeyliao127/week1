@@ -2,7 +2,7 @@ const hamburger = document.querySelector(".hamburger");
 const topItems = document.querySelector(".top-items");
 const body = document.querySelector("body");
 const windowWidth = window.innerWidth;
-console.log(windowWidth);
+
 hamburger.addEventListener("click", (e) => {
   e.stopPropagation();
   topItems.style.display = "block";

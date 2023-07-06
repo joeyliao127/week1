@@ -68,18 +68,41 @@ section.bottom-wrapper {
   display: grid;
   gap: 20px;
   .title-item {
+    position: relative;
     img {
       width: 100%;
       object-fit: cover;
     }
     p {
-      background-color: bisque;
+      background-color: red;
       text-align: center;
       padding-block: 5px;
     }
   }
 }
+.title-item {
+  position: relative;
+  width: 100%;
+  img {
+    display: block;
+    // position: absolute;
+    width: 100%;
+  }
+  .star img {
+    position: absolute;
+    width: 10%;
+    aspect-ratio: 1/1;
+    right: 5%;
+    top: 5%;
 
+    z-index: 1;
+  }
+  .text {
+    position: absolute;
+    inset: auto 0 0 0;
+    opacity: 0.5;
+  }
+}
 @media (min-width: 1200px) {
   .hamburger {
     display: none;
@@ -130,6 +153,21 @@ section.bottom-wrapper {
   section.nav-container {
     div.top-items {
       display: none;
+      width: 50vw;
+      height: 100vh;
+      position: absolute;
+      background-color: white;
+      top: 0;
+      right: -50vw;
+      border-radius: 5px;
+      transform: translateX(-50vw);
+      transform: 0.5s;
+      box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.5);
+
+      p {
+        padding: 10px;
+        text-align: center;
+      }
     }
   }
 
@@ -149,4 +187,7 @@ section.bottom-wrapper {
   .pic-bottom-container {
     grid-template-rows: repeat(1, 1fr);
   }
+}
+.no-scroll {
+  overflow: hidden !important;
 }

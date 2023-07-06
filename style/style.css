@@ -74,15 +74,40 @@ section.bottom-wrapper {
   display: grid;
   gap: 20px;
 }
+.pic-bottom-container .title-item {
+  position: relative;
+}
 .pic-bottom-container .title-item img {
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
 .pic-bottom-container .title-item p {
-  background-color: bisque;
+  background-color: red;
   text-align: center;
   padding-block: 5px;
+}
+
+.title-item {
+  position: relative;
+  width: 100%;
+}
+.title-item img {
+  display: block;
+  width: 100%;
+}
+.title-item .star img {
+  position: absolute;
+  width: 10%;
+  aspect-ratio: 1/1;
+  right: 5%;
+  top: 5%;
+  z-index: 1;
+}
+.title-item .text {
+  position: absolute;
+  inset: auto 0 0 0;
+  opacity: 0.5;
 }
 
 @media (min-width: 1200px) {
@@ -134,6 +159,20 @@ section.bottom-wrapper {
   }
   section.nav-container div.top-items {
     display: none;
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    background-color: white;
+    top: 0;
+    right: -50vw;
+    border-radius: 5px;
+    transform: translateX(-50vw);
+    transform: 0.5s;
+    box-shadow: -10px 0px 10px 0px rgba(0, 0, 0, 0.5);
+  }
+  section.nav-container div.top-items p {
+    padding: 10px;
+    text-align: center;
   }
   section.welcome p {
     font-size: 20px;
@@ -149,4 +188,7 @@ section.bottom-wrapper {
   .pic-bottom-container {
     grid-template-rows: repeat(1, 1fr);
   }
+}
+.no-scroll {
+  overflow: hidden !important;
 }/*# sourceMappingURL=style.css.map */
